@@ -1,0 +1,87 @@
+.candidate-list-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.candidate-list-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.candidate-list-container h2 {
+  color: #555;
+  margin: 30px 0 20px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.add-candidate-btn {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 12px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-candidate-btn:hover {
+  background-color: #45a049;
+}
+
+.add-candidate-btn:active {
+  transform: scale(0.98);
+}
+
+.candidates-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.candidate-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.candidate-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.candidate-card-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.candidate-card-info {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.candidate-card-label {
+  font-weight: 500;
+  color: #555;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 40px 20px;
+  font-size: 16px;
+}
