@@ -197,22 +197,12 @@ With both backend and frontend running:
 - CORS is enabled to allow frontend-backend communication
 - The frontend communicates with the backend at `http://127.0.0.1:8000`
 
-## Code Quality
-
-- TypeScript for type safety
-- Component-based architecture
-- Proper error handling
-- Loading states for user feedback
-- Clean, readable code suitable for junior developers
-- No external UI libraries or unnecessary complexity
-
 ## Development Notes
 
 - The backend automatically validates input using Pydantic
 - The frontend prevents submission of invalid data
 - Both validation layers work together for robust error handling
 - The app gracefully handles network failures
-- Component props are properly typed
 
 ## Decisions
 
