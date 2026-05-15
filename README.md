@@ -1,6 +1,6 @@
 # Candidate Management Application
 
-A simple, beginner-friendly full-stack application for managing candidates built with FastAPI (backend) and React + TypeScript (frontend).
+A simple, beginner-friendly full-stack application for managing candidates built with Express + TypeScript (backend) and React + TypeScript (frontend).
 
 ## Project Overview
 
@@ -8,9 +8,9 @@ This is a take-home assignment demonstrating a junior full-stack developer's abi
 
 ## Tech Stack
 
-- **Backend**: FastAPI (Python)
+- **Backend**: Node.js + Express + TypeScript
 - **Frontend**: React with TypeScript
-- **Data Storage**: In-memory (Python list)
+- **Data Storage**: In-memory array
 - **Styling**: CSS
 
 ## Features
@@ -26,7 +26,12 @@ This is a take-home assignment demonstrating a junior full-stack developer's abi
 
 ```
 fsd-assignment/
-├── app.py                          # FastAPI backend
+├── backend/                        # TypeScript backend
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── src/
+│       ├── server.ts
+│       └── types.ts
 ├── frontend/                       # React frontend
 │   ├── src/
 │   │   ├── components/
@@ -40,6 +45,7 @@ fsd-assignment/
 │   │   └── index.tsx
 │   ├── package.json
 │   └── public/
+├── .gitignore
 ├── README.md
 ```
 
@@ -47,25 +53,27 @@ fsd-assignment/
 
 ### Prerequisites
 
-- Python 3.8+
-- Node.js 14+
+- Node.js 18+
 - npm or yarn
 
 ### Backend Setup
 
-1. Install Python dependencies:
+1. Navigate to the backend directory:
 ```bash
-pip install fastapi uvicorn
+cd backend
 ```
 
-2. Start the FastAPI server:
+2. Install dependencies:
 ```bash
-python -m uvicorn app:app --reload
+npm install
+```
+
+3. Start the backend in development mode:
+```bash
+npm run dev
 ```
 
 The API will be available at `http://127.0.0.1:8000`
-
-Check the API docs at `http://127.0.0.1:8000/docs`
 
 ### Frontend Setup
 
@@ -199,16 +207,16 @@ With both backend and frontend running:
 
 ## Development Notes
 
-- The backend automatically validates input using Pydantic
+- The backend automatically validates input using Zod
 - The frontend prevents submission of invalid data
 - Both validation layers work together for robust error handling
 - The app gracefully handles network failures
 
 ## Decisions
 
-- Used **FastAPI** for the backend to keep the API lightweight and to leverage Pydantic model validation.
+- Used **Express + TypeScript** for the backend to keep the API lightweight and to leverage Zod validation.
 - Used **React + TypeScript** for the frontend to ensure type safety and clean component structure.
-- Stored data in memory with a plain Python list, since a database was intentionally not required.
+- Stored data in memory with a plain JavaScript array, since a database was intentionally not required.
 - Kept the UI simple so the focus stays on correct behavior, validation, and clarity.
 - Normalized phone input to digits only and validated it consistently on both frontend and backend.
 
